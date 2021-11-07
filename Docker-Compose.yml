@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  # Configure your real services here
+  # ...
+
+  haproxy:
+    stop_signal: SIGTERM
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      # Mount the inbox from the haproxy_autoconfd into `/usr/local/etc/haproxy.inbox`
+      - ./example/haproxy.inbox:/usr/local/etc/haproxy.inbox:rw
+    environment:
+      # Configure the backend domains and address
+      - HAPROXY_DOMAINS=localhost
+      - HAPROXY_BACKEND=www.haproxy.org:80

@@ -1,0 +1,36 @@
+[package]
+name = "haproxy_autoconf"
+version = "0.1.0"
+edition = "2021"
+authors = ["KizzyCode Software Labs./Keziah Biermann <development@kizzycode.de>"]
+keywords = []
+categories = []
+description = "`haproxy_autconf` is a container service that manages automatic backend registration and deregistration"
+license = "BSD-2-Clause OR MIT"
+repository = "https://github.com/KizzyCode/haproxy_autoconf-rust"
+readme = "README.md"
+
+
+[[bin]]
+name = "haproxy_autoconf"
+path = "src/main.rs"
+
+
+[badges]
+appveyor = { repository = "KizzyCode/haproxy_autoconf-rust" }
+
+
+[features]
+default = []
+
+
+[dependencies]
+sha2 = "0.9"
+signal-hook = "0.3"
+
+
+[profile.release]
+overflow-checks = true
+
+[profile.bench]
+overflow-checks = true
