@@ -9,4 +9,4 @@ run together with your real backend services so that they are registered automat
 and deregistered if the services go down.
 
 ## Example
-See the [Docker-Compose.yml] file as example.
+See the [Docker-Compose.yml](Docker-Compose.yml) file as example.
