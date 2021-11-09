@@ -7,4 +7,4 @@
 
 # Ignore inbox files
 /example/haproxy.inbox/
-! /example/haproxy.inbox/.gitkeep
+!/example/haproxy.inbox/.gitkeep
