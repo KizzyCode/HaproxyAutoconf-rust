@@ -6,6 +6,7 @@ services:
   haproxy:
     stop_signal: SIGTERM
     build:
+      context: ./
       dockerfile: Dockerfile
     volumes:
       # Mount the inbox from the haproxy_autoconfd into `/usr/local/etc/haproxy.inbox`
