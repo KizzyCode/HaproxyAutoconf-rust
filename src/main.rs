@@ -41,6 +41,7 @@ pub fn main() {
     signal_hook::flag::register(SIGINT, termflag.clone()).expect("Failed to register unix signal handler");
 
     // Wait until we get the termflag
+    eprintln!("haproxy-autoconf is up and running...");
     loop {
         // Check if we have a term signal
         if termflag.load(Ordering::Relaxed) {
